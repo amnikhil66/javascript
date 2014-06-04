@@ -384,14 +384,61 @@
 						<h3>DOM</h3>
 					</header>
 					<article>
-					<pre>
-						<code>
+						<pre>
+							<code>
 	window
 	window.history
 	window.location
 	window.document
-						</code>
-					</pre>
+							</code>
+						</pre>
+					</article>
+				</section>
+				<section>
+					<header>
+						<h3>Events</h3>
+					</header>
+					<article>
+						<pre>
+							<code>
+	var menu = document.getElementById("menu");
+
+	var showMenu = function(event){
+		event.preventDefault();
+
+		event.target.className = "";
+	};
+
+	menu.addEventListener('click', showMenu, false);
+							</code>
+						</pre>
+					</article>
+				</section>
+				<section>
+					<header>
+						<h3>AJAX</h3>
+					</header>
+					<article>
+						<pre>
+							<code>
+	var httpRequest = new XMLHTTPRequest();
+
+	var callback = function(){
+		if(httpRequest.readyState === 4){
+			if(httpRequest.status === 200){
+				alert(httpRequest.responseText);
+			}else{
+				alert("Something Went wrong");
+			}
+		}
+	};
+
+	httpRequest.onreadystatechange = callback;
+
+	httpRequest.open("GET", "recipes/vad-pav.json");
+	httpRequest.send();
+							</code>
+						</pre>
 					</article>
 				</section>
 				<section>
