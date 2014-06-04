@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>JavaScript</title>
+
+		<meta name="description" content="A Introduction to JS">
+		<meta name="author" content="Nikhil">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<header>
+						<img src="img/js.png" alt="Unoffical JavaScript Logo">
+						<h2>JavaScript</h2>
+					</header>
+				</section>
+				<section>
+					<section>
+						<header>
+							<h2>Introduction</h2>
+						</header>
+					</section>
+					<section>
+						<header>
+							<h3>The Punny Language</h3>
+						</header>
+						<p>Mocha AKA LiveScript AKA JavaScript AKA ECMAScript</p>
+					</section>
+					<section>
+						<header>
+							<h3>Birth Place</h3>
+						</header>
+						<figure>
+							<img src="img/netscape.png" alt="NetScape HQ">
+							<figcaption>Netscape HQ 1999 (Source: Flickr)</figcaption>
+						</figure>
+					</section>
+					<section>
+						<header>
+							<h3>The Prototype</h3>
+						</header>
+						<figure>
+							<img src="img/eich.png" alt="Brendan Eich">
+							<figcaption>Brendan Eich</figcaption>
+						</figure>
+					</section>
+					<section>
+						<header>
+							<h3>Engines</h3>
+						</header>
+						<article>
+							<ul>
+								<li>Chakra - IE > 9</li>
+								<li>SpiderMonkey - Gecko</li>
+								<li>V8 - Google Chrome</li>
+								<li>Nitro - Safari</li>
+							</ul>
+						</article>
+					</section>
+				</section>
+				<section>
+					<section>
+						<header>
+							<h3>All Entities Are Created Equal</h3>
+						</header>
+					</section>
+					<section>
+						<header>
+							<h3>Objects</h3>
+						</header>
+						<article>
+							<pre>
+								<code>
+	var number = 1;
+	var string = "Hello";
+	var boolean_value = true;
+
+	function helloWorld(){
+	  alert("Hello World!!");
+	}
+								</code>
+							</pre>
+						</article>
+					</section>
+					<section>
+						<header>
+							<h2>Conditions Always Apply</h2>
+						</header>
+						<article>
+							<pre>
+								<code>
+	null
+
+	undefined
+								</code>
+							</pre>
+						</article>
+					</section>
+				</section>
+				<section>
+					<section>
+						<header>
+							<img src="http://imgs.xkcd.com/comics/python.png" alt="Python Dynamically Typed">
+							<h2>Dynamic Types</h2>
+						</header>
+					</section>
+					<section>
+						<article>
+							<pre>
+								<code>
+	var number = 1; //Number
+	var hello = "Hello!!"; //String
+	var boolean_true = true; //Boolean True
+	var boolean_false = false; //Boolean False
+
+	null
+
+	undefined
+								</code>
+							</pre>
+						</article>
+					</section>
+					<section>
+						<header>
+							<h3>Try not. Do or do not. There is no try.</h3>
+						</header>
+						<article>
+							<pre>
+								<code>
+	function importantLesson(){
+		a = 1;
+		var b = 2;
+	}
+
+	importantLesson();
+
+	alert(a);
+	alert(b);
+								</code>
+							</pre>
+						</article>
+					</section>
+				</section>
+				<section>
+					<section>
+						<header>
+							<h3>Truthy and Falsy</h3>
+						</header>
+					</section>
+					<section>
+						<header>
+							<h3>Falsy</h3>
+						</header>
+						<article>
+							<pre>
+								<code>
+	false
+	0
+	""
+	null
+	undefined
+	NaN
+								</code>
+							</pre>
+						</article>
+					</section>
+					<section>
+						<header>
+							<h3>Truthy</h3>
+						</header>
+						<article>
+							<p>
+								<q cite="http://www.sherlockholmesquotes.com/">
+									Eliminate all other factors, and the one which remains must be the truth.
+								</q>
+							</p>
+						</article>
+					</section>
+					<section>
+						<header>
+							<h3>Logical Operators</h3>
+						</header>
+						<article>
+							<pre>
+								<code>
+	true == true //Equals
+	true && true //And
+	true || true //Or
+	!true //Not
+	true === "true" //What?
+	true !== "true" //What?
+	!!"true" //What?
+	!!!"true" //What?
+								</code>
+							</pre>
+						</article>
+					</section>
+				</section>
+				<section>
+					<section>
+						<header>
+							<h3>Upside Down</h3>
+							<img src="http://imgs.xkcd.com/comics/sky.png " alt="xkcd Sky">
+						</header>
+					</section>
+					<section>
+						<header>
+							<h3>Variables</h3>
+						</header>
+						<article>
+							<pre>
+								<code>
+	var string = "Hello World!!"; //String Object
+	var number = 10; //Number Object
+
+								</code>
+							</pre>
+						</article>
+					</section>
+					<section>
+						<header>
+							<h3>Functions</h3>
+						</header>
+						<article>
+							<pre>
+								<code>
+	function funcName(args){
+		//Logic
+	}
+
+	var funcName = function(args){
+		//Logic
+	};
+
+	funcName(args1, args2); // Dynamic Arguments
+	funcName(args);
+
+
+	(function (){
+		console.log("Halo!!");
+	})(); //Self Excuting Functions or Dog Balls
+
+
+								</code>
+							</pre>
+						</article>
+					</section>
+					<section>
+						<header>
+							<h3>Arrays</h3>
+						</header>
+						<article>
+							<pre>
+								<code>
+	var ar = []; //Array
+	var ar_2 = new Array(); //Bigger way to create an array
+								</code>
+							</pre>
+						</article>
+					</section>
+					<section>
+						<header>
+							<h3>Objects</h3>
+						</header>
+						<article>
+							<pre>
+								<code>
+	var obj = {}; //Object
+								</code>
+							</pre>
+						</article>
+					</section>
+					<section>
+						<header>
+							<h3>Closures</h3>
+						</header>
+						<article>
+							<pre>
+								<code>
+	var printFooBar = function(){
+		var foo = "foo";
+
+		var appendBar = function(){  //Closure
+			console.log(foo + "bar");
+		};
+
+		appendBar();
+	};
+								</code>
+							</pre>
+						</article>
+					</section>
+					<section>
+						<header>
+							<h3>
+								Class
+							</h3>
+						</header>
+						<pre>
+							<code>
+	//Class
+	var Car = function(){
+		var name = null;
+
+		var setModelName = function(model){
+			name = model;
+		};
+
+		var getModelName = function(){
+			return name;
+		};
+
+		return {
+			setModelName: setModelName,
+			getModelName: getModelName
+		};
+	};
+
+
+	var figo = new Car();
+	figo.setModelName("Figo");
+	figo.getModelName();
+
+
+							</code>
+						</pre>
+					</section>
+					<section>
+						<header>
+							<h3>Prototypes</h3>
+						</header>
+						<article>
+							<pre>
+								<code>
+	Object.prototype;
+								</code>
+							</pre>
+						</article>
+					</section>
+					<section>
+						<header>
+							<h3>Debugging</h3>
+						</header>
+						<article>
+							<pre>
+								<code>
+	debugger;
+								</code>
+							</pre>
+						</article>
+					</section>
+				</section>
+				<section>
+					<header>
+						<h3>DOM</h3>
+					</header>
+					<article>
+					<pre>
+						<code>
+	window
+	window.history
+	window.location
+	window.document
+						</code>
+					</pre>
+					</article>
+				</section>
+				<section>
+					<header>
+						<h3>delete Session.javascript;</h3>
+					</header>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
